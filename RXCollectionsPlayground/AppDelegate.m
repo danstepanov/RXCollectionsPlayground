@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <RXCollections/RXCollection.h>
 
 @interface AppDelegate ()
 

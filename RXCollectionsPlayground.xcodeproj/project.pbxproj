@@ -14,6 +14,7 @@
 		5CAC71F51B32C72400FCF97F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CAC71F41B32C72400FCF97F /* Images.xcassets */; };
 		5CAC71F81B32C72400FCF97F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CAC71F61B32C72400FCF97F /* LaunchScreen.xib */; };
 		5CAC72041B32C72400FCF97F /* RXCollectionsPlaygroundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CAC72031B32C72400FCF97F /* RXCollectionsPlaygroundTests.m */; };
+		C104675EF1BED13DD6C98693 /* libPods-RXCollectionsPlayground.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A416E6C2EE555384AAD1A1 /* libPods-RXCollectionsPlayground.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,9 @@
 		5CAC71FD1B32C72400FCF97F /* RXCollectionsPlaygroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RXCollectionsPlaygroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CAC72021B32C72400FCF97F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CAC72031B32C72400FCF97F /* RXCollectionsPlaygroundTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXCollectionsPlaygroundTests.m; sourceTree = "<group>"; };
+		5D942B6681E1945A33690C59 /* Pods-RXCollectionsPlayground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXCollectionsPlayground.release.xcconfig"; path = "Pods/Target Support Files/Pods-RXCollectionsPlayground/Pods-RXCollectionsPlayground.release.xcconfig"; sourceTree = "<group>"; };
+		C2B4F51272870E21E8B88CF1 /* Pods-RXCollectionsPlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXCollectionsPlayground.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RXCollectionsPlayground/Pods-RXCollectionsPlayground.debug.xcconfig"; sourceTree = "<group>"; };
+		D5A416E6C2EE555384AAD1A1 /* libPods-RXCollectionsPlayground.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RXCollectionsPlayground.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C104675EF1BED13DD6C98693 /* libPods-RXCollectionsPlayground.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +65,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A68DB6A4B01B671E333F03D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5A416E6C2EE555384AAD1A1 /* libPods-RXCollectionsPlayground.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5CAC71DB1B32C72400FCF97F = {
 			isa = PBXGroup;
 			children = (
 				5CAC71E61B32C72400FCF97F /* RXCollectionsPlayground */,
 				5CAC72001B32C72400FCF97F /* RXCollectionsPlaygroundTests */,
 				5CAC71E51B32C72400FCF97F /* Products */,
+				71160A80489AF7DEDB404BAA /* Pods */,
+				4A68DB6A4B01B671E333F03D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +134,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		71160A80489AF7DEDB404BAA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C2B4F51272870E21E8B88CF1 /* Pods-RXCollectionsPlayground.debug.xcconfig */,
+				5D942B6681E1945A33690C59 /* Pods-RXCollectionsPlayground.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5CAC72071B32C72400FCF97F /* Build configuration list for PBXNativeTarget "RXCollectionsPlayground" */;
 			buildPhases = (
+				FC7ABD7C3993EC07B15C2FAC /* Check Pods Manifest.lock */,
 				5CAC71E01B32C72400FCF97F /* Sources */,
 				5CAC71E11B32C72400FCF97F /* Frameworks */,
 				5CAC71E21B32C72400FCF97F /* Resources */,
+				AD525B466541AD8DFE1306DD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +239,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AD525B466541AD8DFE1306DD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RXCollectionsPlayground/Pods-RXCollectionsPlayground-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC7ABD7C3993EC07B15C2FAC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5CAC71E01B32C72400FCF97F /* Sources */ = {
@@ -345,6 +404,7 @@
 		};
 		5CAC72081B32C72400FCF97F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2B4F51272870E21E8B88CF1 /* Pods-RXCollectionsPlayground.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RXCollectionsPlayground/Info.plist;
@@ -355,6 +415,7 @@
 		};
 		5CAC72091B32C72400FCF97F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D942B6681E1945A33690C59 /* Pods-RXCollectionsPlayground.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RXCollectionsPlayground/Info.plist;
@@ -416,6 +477,7 @@
 				5CAC72091B32C72400FCF97F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5CAC720A1B32C72400FCF97F /* Build configuration list for PBXNativeTarget "RXCollectionsPlaygroundTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +486,7 @@
 				5CAC720C1B32C72400FCF97F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
